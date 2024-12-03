@@ -1,0 +1,73 @@
+POST API URL: http://localhost:5000/api/users/register
+------------------------------
+JSON Payload for Registration:
+------------------------------
+
+{
+  "name": "Sammar",
+  "email": "abbas.sammarsyed@gmail.com",
+  "password": "123"
+}
+
+
+POST API URL: http://localhost:5000/api/users/login
+------------------------------
+JSON Payload for Login:
+------------------------------
+
+{
+  "email": "abbas.sammarsyed@gmail.com",
+  "password": "123"
+}
+
+
+POST API URL: http://localhost:5000/api/products
+------------------------------
+JSON Payload to Add Product:
+------------------------------
+{
+  "name": "Laptop",
+  "price": 1000,
+  "description": "Dell Latitude 3520",
+  "category": "Electronics"
+}
+
+
+---------------------------------------------------------------------
+GET API URL: http://localhost:5000/api/products (to get all products)
+---------------------------------------------------------------------
+
+
+----------------------------------------------------
+GET API URL: http://localhost:5000/api/users/profile
+----------------------------------------------------
+Select Authorization:
+Type: Bearer Token
+Token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGUxODNkOTlhNzU0MDE5MWEzNzBlNiIsImlhdCI6MTczMzE3MjI3NSwiZXhwIjoxNzM1NzY0Mjc1fQ.J5S98Y4uKXqjxCR07JHRegwdt9qSYIf6PIlksva973k
+
+
+----------------------------------------------------
+POST API URL: http://localhost:5000/api/orders
+----------------------------------------------------
+JSON Payload to Place Orders:
+
+{
+  "orderItems": [
+    {
+      "name": "7 Habits of Highly Effective People Book",
+      "quantity": 1,
+      "price": 1000,
+      "product": "674da070d04a7c9c067729f1" //we have to use id of any registered user here
+    }
+  ],
+  "shippingAddress": {
+    "address": "Opposite Gohar Rabi Center, Tariq Road, Karachi",
+    "city": "Karachi",
+    "postalCode": "75400",
+    "country": "Pakistan"
+  },
+  "paymentMethod": "Credit Card",
+  "taxPrice": 50,
+  "shippingPrice": 30,
+  "totalPrice": 1080
+}
